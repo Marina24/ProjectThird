@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:padding="@dimen/padding" />
+
+    <TextView
+        android:id="@+id/lifecycle_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/btn_standard"
+        android:padding="@dimen/padding"
+        android:textSize="@dimen/text_size_lifecycle"
+        android:scrollbars="vertical"
+        android:textColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="@dimen/layout_width"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/btn_standard"
+        android:background="@android:color/white"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/padding"
+        android:padding="@dimen/padding_layout"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/task_id_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding" />
+
+        <LinearLayout
+            android:id="@+id/task_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_standard"
+        android:layout_above="@+id/btn_singletop"
+        android:text="@string/standard"
+        android:textColor="@color/green"
+        style="@style/Button"/>
+
+    <Button
+        android:id="@+id/btn_singletop"
+        android:layout_above="@+id/btn_singletask"
+        android:text="@string/singleTop"
+        android:textColor="@color/blue"
+        style="@style/Button"/>
+
+    <Button
+        android:id="@+id/btn_singletask"
+        android:layout_above="@+id/btn_singleInstance"
+        android:text="@string/singleTask"
+        android:textColor="@color/yellow"
+        style="@style/Button"/>
+
+    <Button
+        android:id="@+id/btn_singleInstance"
+        android:layout_alignParentBottom="true"
+        android:text="@string/singleInstance"
+        android:textColor="@color/red"
+        style="@style/Button"/>
+
+</RelativeLayout>

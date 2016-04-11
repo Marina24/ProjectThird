@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Activities Launch</string>
+    <string name="singleInstance">singleInstance</string>
+    <string name="singleTask">singleTask</string>
+    <string name="singleTop">singleTop</string>
+    <string name="standard">standard</string>
+</resources>
